@@ -5,8 +5,7 @@ const multer = require('multer');
 const bodyParser = require('body-parser')
 
 const app = express();
-const storage = multer.memoryStorage();
-const upload = multer({storage});
+const upload = multer();
 
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
