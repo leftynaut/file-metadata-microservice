@@ -19,8 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/upload', upload.single('ul'), (req, res) => {
-  console.log(req.file)
-  res.send(req.file);
+  res.json({ size: req.file.size });
 });
 
 const port = process.env.PORT || 3000;
